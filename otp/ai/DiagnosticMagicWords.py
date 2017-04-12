@@ -1,8 +1,11 @@
-from MagicWordGlobal import *
-from direct.showbase.GarbageReport import GarbageLogger
-from direct.showbase.ContainerReport import ContainerReport
-from direct.directnotify.DirectNotifyGlobal import *
 import gc
+
+from direct.directnotify.DirectNotifyGlobal import *
+from direct.showbase.ContainerReport import ContainerReport
+from direct.showbase.GarbageReport import GarbageLogger
+
+from otp.ai.MagicWordGlobal import *
+from toontown.ai.ServiceStart import game
 
 category = CATEGORY_SYSADMIN if game.process == 'server' else CATEGORY_DEBUG
 

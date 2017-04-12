@@ -1,3 +1,6 @@
+from distutils import config
+
+from direct.p3d.DeploymentTools import xrange
 from direct.showbase import PythonUtil
 
 MINIMUM_MAGICWORD_ACCESS = 300

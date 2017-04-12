@@ -1,7 +1,11 @@
-import urllib
 import os
-from pandac.PandaModules import HTTPClient, Ramfile
+import urllib
+from distutils import config
+
 from direct.directnotify import DirectNotifyGlobal
+from direct.task.TaskManagerGlobal import taskMgr
+from pandac.PandaModules import HTTPClient, Ramfile
+
 
 class BanManagerAI:
     notify = DirectNotifyGlobal.directNotify.newCategory('BanManagerAI')
@@ -33,7 +37,7 @@ class BanManagerAI:
          dislid,
          comment,
          fullUrl))
-        simbase.air.writeServerEvent('ban-request', avId=avatarId, dislid=dislid, comment=comment, fullUrl=fullUrl)
+        # simbase.air.writeServerEvent('ban-request', avId=avatarId, dislid=dislid, comment=comment, fullUrl=fullUrl)
         if config.GetBool('do-actual-ban', True):
             newTaskName = 'ban-task-%d' % self.curBanRequestNum
             newTask = taskMgr.add(self.doBanUrlTask, newTaskName)

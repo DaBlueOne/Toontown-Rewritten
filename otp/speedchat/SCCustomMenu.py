@@ -1,6 +1,9 @@
-from SCMenu import SCMenu
-from SCCustomTerminal import SCCustomTerminal
+from direct.directbase.DirectStart import base
+
 from otp.otpbase.OTPLocalizer import CustomSCStrings
+from otp.speedchat.SCCustomTerminal import SCCustomTerminal
+from otp.speedchat.SCMenu import SCMenu
+
 
 class SCCustomMenu(SCMenu):
 
